@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-oracle-red: #C74634;
+  --color-oracle-dark: #9E351F;
+  --color-oracle-light: #E85D4E;
+  --color-dark-bg: #0a0a0f;
+  --color-dark-surface: #12121a;
+  --color-dark-card: #1a1a24;
+  --color-dark-border: #2a2a3a;
+  --color-dark-text: #e2e8f0;
+  --color-dark-muted: #94a3b8;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-oracle-red);
+}
+
+/* Code-like text styling */
+.code-text {
+  font-family: var(--font-mono);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #C74634 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect for cards */
+.glow-card:hover {
+  box-shadow: 0 0 40px rgba(199, 70, 52, 0.15);
+}
+
+/* Subtle grid background pattern */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
